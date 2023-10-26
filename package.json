@@ -1,0 +1,16 @@
+{
+  "name": "03-lista-tareas",
+  "version": "1.0.0",
+  "description": "pequeña aplicacion de consola para crear una lista de tareas pendientes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orellan, Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.4",
+    "uuid": "^9.0.1"
+  }
+}
