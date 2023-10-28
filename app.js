@@ -3,7 +3,8 @@ const { inquirerMenu,
         pausa,
         leerInput,
         listadoTareasBorrar,
-        confirmar} = require('./helpers/inquirer');
+        confirmar,
+        mostrarListadoChecklist} = require('./helpers/inquirer');
 const Tareas = require('./models/tareas');
 // import inquirerMenu from './helpers/inquirer';
 
@@ -43,6 +44,12 @@ const main = async () => {
             case '4': //listar pendientes
                 tareas.listarPendientesCompletadas(false);
             break;
+
+            case '5': //Completado | pendiente
+                const ids = await mostrarListadoChecklist(tareas.listadoArr);
+                console.log(ids);
+            break;
+            
 
             case '6': //borrar tarea
                 const id = await listadoTareasBorrar( tareas.listadoArr );
